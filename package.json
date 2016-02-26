@@ -1,0 +1,22 @@
+{
+    "name": "mars",
+    "version": "1.0.0",
+    "license": "GPL-3.0",
+    "description" : "mars",
+    "main": "index.html",
+    "window": {
+        "toolbar": false,
+        "width": 1120,
+        "height": 710,
+        "icon": "./favicon.png"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/komunikator/mars_desktop"
+    },
+    "license": "GNU GPLv3",
+    "dependencies": {
+        "dateformat": "~1.0.11",
+        "mars": "https://github.com/komunikator/mars"
+    }
+}
