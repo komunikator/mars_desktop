@@ -1,2 +1,5 @@
 var mars = require('mars');
-window.location.href = "http://localhost:8000/";
+
+mars.events.request('startWebServer', {}, function (err, obj) {
+    window.location.href = "http://localhost:8000/";
+});
