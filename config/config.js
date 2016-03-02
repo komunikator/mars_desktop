@@ -10,6 +10,7 @@
 	    "username": "user_XXXXXXXXXX"
 	}
     ],
+    "webAuth":"disable",
     "trustedNet":{
         "tokenURL":"https://net.trusted.ru/idp/sso/oauth/token",
         "profileURL": "https://net.trusted.ru/trustedapp/rest/person/profile/get",
