@@ -18,6 +18,8 @@ lang = {
     everyDay: 'Каждый день',
     active: 'Активный',
     active_calls: 'Активные вызовы',
+    intercept_call: 'Перехватить звонок',
+    end_call: "Положить трубку",
     settings: 'Настройки',
     upgrade: 'Обновления',
     logout: 'Выход',

@@ -130,18 +130,28 @@ Ext.define('IVR.view.dialogs.List', {
                 text: lang.findings,
                 flex: 1,
                 dataIndex: 'data'
-            }
-            /*
-             {
-             text: lang.rtp_local,
-             flex: 1,
-             dataIndex: 'rtp_local'
-             },
-             {
-             text: lang.rtp_remote,
-             flex: 1,
-             dataIndex: 'rtp_remote'
-             }*/
+            },
+            {
+                text: lang.intercept_call,
+                xtype:'actioncolumn', 
+                items: [{
+                    icon: 'main/images/ivr/phone.png',
+                    tooltip: lang.intercept_call,
+                    handler: function(value, metaData, record, row, col, store, gridView) {
+                        
+                        alert(lang.intercept_call + " id: "  + store.internalId);
+                    }
+                }, 
+                {
+                    icon: 'main/images/ivr/cancel.png',
+                    tooltip: lang.end_call,
+                    handler: function(value, metaData, record, row, col, store, gridView) {
+                        
+                        alert(lang.end_call + " id: "  + store.internalId);
+                    }
+                }
+                ]
+             }
         ];
 
         //parent
