@@ -138,16 +138,18 @@ Ext.define('IVR.view.dialogs.List', {
                     icon: 'main/images/ivr/phone.png',
                     tooltip: lang.intercept_call,
                     handler: function(value, metaData, record, row, col, store, gridView) {
-                        
-                        alert(lang.intercept_call + " id: "  + store.internalId);
+                        if (store && store.internalId) {
+                            IVR.getApplication().socket.send( JSON.stringify(["interceptCall", store.internalId]) );
+                        }
                     }
                 }, 
                 {
                     icon: 'main/images/ivr/cancel.png',
                     tooltip: lang.end_call,
                     handler: function(value, metaData, record, row, col, store, gridView) {
-                        
-                        alert(lang.end_call + " id: "  + store.internalId);
+                        if (store && store.internalId) {
+                            IVR.getApplication().socket.send( JSON.stringify(["endInterceptCall", store.internalId]) );
+                        }
                     }
                 }
                 ]

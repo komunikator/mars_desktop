@@ -49,6 +49,7 @@ Ext.application({
     timerClock: null,
     serverTime: 0,
     deltaTime: 0,
+    socket: {},
     wsLaunch: function() {
         if (!window.WebSocket) {
             console.log('WebSocket: is not available');
@@ -57,13 +58,14 @@ Ext.application({
         if (IVR.getApplication().wsConnect === 'disable') {
             IVR.getApplication().wsConnect = 'expect';
 
-            var socket = new WebSocket("ws" + (window.location.protocol == "https:" ? "s" :"") + "://" + window.location.hostname + ":" + window.location.port + _webPath);
+            IVR.getApplication().socket = new WebSocket("ws" + (window.location.protocol == "https:" ? "s" :"") + "://" + window.location.hostname + ":" + window.location.port + _webPath);
+            var socket = IVR.getApplication().socket;
 
             socket.onmessage = function(event) {
                 //var incomingMessage = event.data;
                 //console.log(incomingMessage);
                 var obj = Ext.JSON.decode(event.data).data;
-                if (obj.source) {
+                if (obj && obj.source) {
                     var store = Ext.data.StoreManager.lookup(obj.source) || (Ext.getCmp(obj.source + 'Grid') && Ext.getCmp(obj.source + 'Grid').store);
                     //if (store && store.store)
                     //    store = store.store;
