@@ -119,7 +119,7 @@ Ext.define('IVR.view.dialogs.List', {
             {
                 text: lang.duration,
                 flex: 1,
-                dataIndex: 'duration',
+                dataIndex: 'duration'
             },
             {
                 text: lang.script,
@@ -134,6 +134,7 @@ Ext.define('IVR.view.dialogs.List', {
             {
                 text: lang.intercept_call,
                 xtype:'actioncolumn', 
+                width: 120,
                 items: [{
                     icon: 'main/images/ivr/phone.png',
                     tooltip: lang.intercept_call,

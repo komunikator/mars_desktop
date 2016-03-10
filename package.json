@@ -6,7 +6,7 @@
     "main": "index.html",
     "window": {
         "toolbar": false,
-        "width": 1120,
+        "width": 1220,
         "height": 710,
         "icon": "./favicon.png"
     },
