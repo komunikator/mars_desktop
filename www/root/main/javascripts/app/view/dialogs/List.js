@@ -139,7 +139,7 @@ Ext.define('IVR.view.dialogs.List', {
                     tooltip: lang.intercept_call,
                     handler: function(value, metaData, record, row, col, store, gridView) {
                         if (store && store.internalId) {
-                            IVR.getApplication().socket.send( JSON.stringify(["interceptCall", store.internalId]) );
+                            IVR.getApplication().socket.send( JSON.stringify(["callPickUp", {sessionID: store.internalId}]) );
                         }
                     }
                 }, 
@@ -148,7 +148,7 @@ Ext.define('IVR.view.dialogs.List', {
                     tooltip: lang.end_call,
                     handler: function(value, metaData, record, row, col, store, gridView) {
                         if (store && store.internalId) {
-                            IVR.getApplication().socket.send( JSON.stringify(["endInterceptCall", store.internalId]) );
+                            IVR.getApplication().socket.send( JSON.stringify(["callTerminated", {sessionID: store.internalId} ]));
                         }
                     }
                 }
