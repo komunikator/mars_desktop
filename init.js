@@ -4,6 +4,9 @@ new (require('./lib/pick_up.js'))(mars);
 
 mars.events.on('startWebServer', function (obj) {
     if (obj.port) {
+        ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", "http://localhost:" + obj.port);
+        document.body.appendChild(ifrm);
         //window.location.href = "http://localhost:" + obj.port;
     }
 });
