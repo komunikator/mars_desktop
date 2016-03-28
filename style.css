@@ -8,3 +8,8 @@ iframe {
     height: 100vh;        /* Viewport-relative units */
     width: 100vw;
 }
+.preloader {
+    position: absolute;
+    top: 240px;
+    left: 535px;
+}
