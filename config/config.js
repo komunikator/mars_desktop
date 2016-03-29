@@ -6,13 +6,13 @@
             "username": "admin",
             "password": "admin"
         },
-	{   
-	    "username": "user_XXXXXXXXXX"
-	}
+        {
+            "username": "user_XXXXXXXXXX"
+        }
     ],
-    "webAuth":"disable",
-    "trustedNet":{
-        "tokenURL":"https://net.trusted.ru/idp/sso/oauth/token",
+    "webAuth": "disable",
+    "trustedNet": {
+        "tokenURL": "https://net.trusted.ru/idp/sso/oauth/token",
         "profileURL": "https://net.trusted.ru/trustedapp/rest/person/profile/get",
         "redirect_uri": "/auth/trusted",
         "client_id": "TRUSTED_LOGIN_CLIENT_ID",
@@ -39,18 +39,17 @@
     },
     "sipAccounts": [
         {
-            "host": "193.201.229.35",
-            "domain": "multifon.ru",
+            "host": "172.17.2.77",
             "expires": 60,
-            "password": "XXXXXXXXX",
-            "user": "XXXXXXXXX",
+            "user": "_4",
+            "password": "_4",
             "disable": 0
         }
     ],
-     "levels": {
-       "[all]": "trace",
-       "http": "error"
-     },
+    "levels": {
+        "[all]": "trace",
+        "http": "error"
+    },
     "replaceConsole": "false",
     "appenders": [
         {
