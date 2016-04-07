@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Mars"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.2.0"
 #define MyAppPublisher ""
 #define MyAppURL "https://github.com/komunikator/mars_desktop/"
 #define MyAppExeName "nw.exe"
@@ -11,7 +11,7 @@
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{7898EE93-0EB0-47AB-B456-1EB05B51F2D6}
+AppId={{9DDA5A63-CC36-49A6-A753-84FA332447D7}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -19,13 +19,12 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName="Mars"
+DefaultDirName={userappdata}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 OutputDir=C:\mars_setup
-OutputBaseFilename=mars_setup
+OutputBaseFilename=mars_setup_{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
-
 [Languages]
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 

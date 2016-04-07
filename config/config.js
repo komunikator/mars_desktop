@@ -2,16 +2,15 @@
     "webPort": 8000,
     "audioCodec": "PCMA",
     "stunServer": "stun.sipnet.ru:3478",
-    "wwwPath": "node_modules/mars",
     "webAuth": "disable",
     "maxCalls": 10,
     "ringingTimeout": "30",
     "serviceName": "MARS",
     "activeAccount": 0,
-    "def_tts": "ivona",
+    "def_tts": "yandex",
     "ivona_speech": {
-        "accessKey": "XXXXXXXXX",
-        "secretKey": "XXXXXXXXX",
+        "accessKey": "",
+        "secretKey": "",
         "language": "ru-RU",
         "name": "Tatyana",
         "gender": "Female"
@@ -19,19 +18,11 @@
     "recognize": {
         "type": "yandex",
         "options": {
-            "developer_key": "XXXXXXXXX",
+            "developer_key": "",
             "model": "general"
         }
     },
     "sipAccounts": [
-        {
-            "host": "193.201.229.35",
-            "expires": 60,
-            "user": "xxxxxxxx",
-            "password": "xxxxxxxx",
-            "disable": 1,
-            "domain": "multifon.ru"
-        }
     ],
     "levels": {
         "[all]": "trace",

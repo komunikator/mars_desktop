@@ -1,4 +1,8 @@
 try {
+    var bus = require('mars/lib/system/bus');
+	bus.config.set("wwwPath", process.cwd() + '/' + 'node_modules/mars');
+        bus.config.save();
+
     var mars = require('mars');
 
     mars.events.on('startWebServer', function (obj) {
