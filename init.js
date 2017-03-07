@@ -4,6 +4,8 @@ try {
         bus.config.save();
 
     var mars = require('mars');
+    require('./lib/pick_up.js')(mars);
+    require('./lib/softphone.js')(mars);
 
     mars.events.on('startWebServer', function (obj) {
         if (obj.port) {
